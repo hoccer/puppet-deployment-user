@@ -50,7 +50,7 @@ class deployment-user::install {
     require => User["deployment"],
   }
 
-  ssh_authorized_key { "deployment":
+  ssh_authorized_key { "deployment_kaazoo":
     ensure => present,
     key => "AAAAB3NzaC1yc2EAAAABIwAAAQEAxNJeGh7iLgMZxkahVMMtvEZLlGeZZM/wV3+sPoFMd7NiTWJCBhI7oO4fknJaJtxAYkVhdn+GxrJAXZsvbNw7KfCiGdBp2OGzIrFW14zwBpnPPVyOVfeAkZz1x35dDyp2LKH3xgp7knuggsA2n+hjQBCuYOZNRBwRZnlkNbSTIacYVufss8nD6EsfE4shg4Rky40MZocqmdLxEalqzyUYf10Mi5Yya/10gcjBZoM5KNYSCPKDYhBr7h7mz3n42LYMfsBYgEzhcvTxgWmEoa1bS40hQLzWWC89/jPBq6pDfF+ukx+efV5v58aEu7y8A1JuUc2sPC5J4eY5MD4ZnULqjQ==",
     name => "kaazoo@dellgen",
@@ -59,7 +59,7 @@ class deployment-user::install {
     require => File["/home/deployment/.ssh/authorized_keys"],
   }
 
-  ssh_authorized_key { "deployment":
+  ssh_authorized_key { "deployment_rasca":
     ensure => present,
     key => "AAAAB3NzaC1yc2EAAAABIwAAAQEAtc77hEN+5rCv9hCLIwtpHnAsv0NV7kCl/l2Y7aAOXFQ933b66h8Pnn1vMjVruAfUKlBWJq3CKPWTXK3FnUOVgcXkzzRzKq8hGPpLUHWHcj/yXi5YgOHMUIAyAggaD6HK26QGN9vL9BHpOd4j4DsmuGnWqskrcK0k5cv0Fhrv/2pHV4tdwy4CMVzv+YEfv/t2BKcK3zU1zLUNOd+RrbsMjYBvlMjKRCcfO8+ro/O5w3Ds7g/Rh+NRqLUs54UZ5G/kJ1z3VNv+PTEnwLNzF4ZibGd9AlXmF2qclc+7BD82q0UfHnAMr0lP3RH6QM9EZ4oQqZ+GXoLWS/QpAG8/MbuveQ==",
     name => "rasca@catwoman",
@@ -68,7 +68,7 @@ class deployment-user::install {
     require => File["/home/deployment/.ssh/authorized_keys"],
   }
 
-  ssh_authorized_key { "deployment":
+  ssh_authorized_key { "deployment_chris":
     ensure => present,
     key => "AAAAB3NzaC1yc2EAAAADAQABAAACAQDOUNlUYqXRFG7gpozaimz1GhY62qwj0pen+b94CN+WwWVfhSiJeNYRgra3fEIVsBo8wfCMEuKB5HHtJAUngt/duxzDzRNo/Unv79muLOJ3jpGlIIPQOocX9qfZX0TQfGkjyc1vJd+SesD7z4zPQEtTAbUO27xmylqVtvbpypx7dA2QiRk1egKbitju1ZD/6HC9imnlRJlOqG3h2fEtjRoTpLLskn17u3Sdoz/nIjNf/abLDeN7gc5gxDq9utnL1fJsk/lT6U/PDBY84OBFuub3Cm8pJKhyWx5xhvoiwm5oIvkBNXbw3+5JYxtoknfkY9ruX8u9BOoCIdnYJTW7PqHT7Fk1uhC/bW8gJa4XQ/u5b+lihqYfVLTgxflng+jaoH41QPNJsBpmFdVqDFYr1Ahdh6U06iBpv1gttE+BWvcyxMZnk7lqEfAXZANDDqGvohmbGajO0J8nLC0jgYICOoL/ztNobdDPWnltLaYBr9yzwxuUZG1Q8L/HLheetpW8fHe9Uz4Sxi7NrJuH/V9vfJKyXkcfi8jjpgWQUzAJQcymMztfyOtOEdf6nvzBNks4kQpW7K/4w6eNBVDGXmvSR5Ck8/l+dKXJyZ4P/RFQG71igJn0/eEdY8+toBiqDNrRz1Fbnnn9EZkMScF6uj630zDS9ZY4k5m6edzWFj6uT05z1w==",
     name => "chris@corax-2.local",
@@ -77,7 +77,7 @@ class deployment-user::install {
     require => File["/home/deployment/.ssh/authorized_keys"],
   }
 
-  ssh_authorized_key { "deployment":
+  ssh_authorized_key { "deployment_becks":
     ensure => present,
     key => "AAAAB3NzaC1yc2EAAAABJQAAAgBx+TUiBOEvvJZ4ERSZftoN6lVhE++8SQcJ1jxt5f6FvJwH59TTnV5qySzRY38uBoG2Pws+UsLaDK68Gun9fW5KDvb8bPNIalFYYMZzlMLkd2qA/GJEaLlpD8VDoIr7r73u3WJUUKqlG8SF0ImbT283aX6pf+F0Vh+bdoPoepQ3NbJko/zJMXc1EC0ZWzFDbwzm9m3tdp6VZScOvDGa2fg0uIcBkFIyMXnp458i2YtRZ0uFBP/VcVmKeRSJCqz8NNxaMBUMgOp+IyRUpBp6pxbXYPPa7vPOAHZitqDUoajbj1DYl4vlGMIOYgcx3CA8wr8MqGsUPvGbrPGOUCm4UncYw99e2OUvnPBlP3R+R/SG6RBadvtWjcPP7XkOBfJ4oBk1u24juQoIlkR4nCz7zXSsR6Z8x73PPTJ1XWdOUnxmpF7tlTT+BNHp9fb84cnF9W9uc0wao8L1r3bOdSRX0trN2WE7jah1s5qFtVJPaX78b3UXyl2mFnqkCHxT1Y0e3z0xfmPywtc3d2S0qr0K+0GfHzxqDe2lisypesvx8Eh0faJ3nMMwBcsC7V+ZPocKykuCWV8bpxhvknZYZuTRsR7KGrppIVDe9RZTCZ9A9uWl2Kuf1xbDJn+wVfntVHTUg/FXu8urmp0KBuJ2c4Y2eIVLx0n/JAClSaB+9qrUUAFzAw==",
     name => "becks@bici.local",
@@ -86,7 +86,7 @@ class deployment-user::install {
     require => File["/home/deployment/.ssh/authorized_keys"],
   }
 
-  ssh_authorized_key { "deployment":
+  ssh_authorized_key { "deployment_martin":
     ensure => present,
     key => "AAAAB3NzaC1yc2EAAAABIwAAAQEAmYimRuKNRtdNoyNnfHiyWOboq+WnX0T50w0Z+dtRcUWEtsTF1yMpROw+5tuHOM80DE4Bq8TXePCpH82cBUwhj0C4qPrmKf0JBxV8O+HHnhIoCxfgPAmRbWaHu1kj1/vkxEDX65Gww/mB4bTDfbCf2dy0a1B6loAi2p9o2KvykZb95sqeGwnLao3Hj7SNZt6w2pX9vWP8x2GI3iV9bvf10VXoPoZbJrYHS4nWzpTVJcAqoAHNVfYeLCJpLgLLpBPmURpqwix1p/5kZqWkkIvV2YEvANpxFAUAZLvExIBBrcbNk4ZWGh4+Xw3s2g3pMXSdgcdfOvtOynHRhN5zVVxafw==",
     name => "martin@artcom.de",
@@ -95,7 +95,7 @@ class deployment-user::install {
     require => File["/home/deployment/.ssh/authorized_keys"],
   }
 
-  ssh_authorized_key { "deployment":
+  ssh_authorized_key { "deployment_andreasm":
     ensure => present,
     key => "AAAAB3NzaC1yc2EAAAABIwAAAQEAo41E4Nyvefg1XutPGpccLg3IT9PESEtyGJHb7eIC8nE15l/fHYX/ZfulHf/gJfUxa+bNMBrUCJlzsbqSeJ6eSDyZ8hz27G7Sl4+ieOIgSXn6hD9eG8s9/9LLYrLRiJM2nP8yXY4JAHxG+jHeEr/YB7RH68OMnL1ac1SmVgkRayg37Tvwn1zSmrIoKCk7RCzr4AoBkVhTToO5P5ypU9osx6rcpW+HBX0ASQuCmedK1C6jLk+f04WL/ZjUv6pQwcrOdidyrljMMuPF08UXkWF9l8Sy1SAglISbL6/dND1C5ypnfs5Nvjkkx7QFoPToxuvo+gGlPlVIKYB//WtTcqeTUw==",
     name => "andreasm@artcom.de",
@@ -104,7 +104,7 @@ class deployment-user::install {
     require => File["/home/deployment/.ssh/authorized_keys"],
   }
 
-  ssh_authorized_key { "deployment":
+  ssh_authorized_key { "deployment_kristine":
     ensure => present,
     key => "AAAAB3NzaC1yc2EAAAABIwAAAgEAvo0vAjpd/3JQwo5aHFvXH6aCtx75EsGfXGBdJoKs5SveqM9d8d0AU4FMhPybj/e4D80TFvct0P51PYBHYH1sCIcCDb6g2qztQoYVj5BlEZ4E60PmkM3Y/2XNGE45d0z8oFN/52yrJ6E4ZviCNk0uy6Hu2ch/BW2gFOjLg6Id8i9lhU0JwKaxO6Mdrv5GG22AJYO0W8/UAVy1UnZ7848fSM3q4H4xp40sGCzPHpQymr9Hf5k47c/PqxCTfwLw68k2IvA6iKdiaXKF6bz8+7QaAOQ8v2q4ZY/NSae5Q8E7MxB5wWirb+LtBq5en6IVz8JxQhL5gLyHK5RSPK7MeH1bEf/cuf0xzx4NLSf7Jl9GWjaaczjFUNJq8M7R4L1Oc53uHPOSfe0FVj14M082jtNaI2FSo1cP/sxqdSNOtPK/r2a29BsK4EkytyndaRCCizbAhoQafh8Ws92v/WGls+FG6HikdnHu8JhrPMXRo2EvVKZnhujpX5fGtVcxVhGlB1e4vvaboIz9a/x4PU4UF47gA80nfGPG7ZAw5eGLdRMupRjfO+3xUQaB+/lShfZEmJdTUIGa4FTqXGK60T1w3SivPhB65zPZ5np5qvMqr1yQfsc6tpilEhtFcQM7HdSiZO+cFMMzdpcnM80DWFnwxQ8yWqp5jFQBpYa4jpXHPYPYZp8=",
     name => "kristine@artcom.de",
@@ -113,7 +113,7 @@ class deployment-user::install {
     require => File["/home/deployment/.ssh/authorized_keys"],
   }
 
-  ssh_authorized_key { "deployment":
+  ssh_authorized_key { "deployment_pavel":
     ensure => present,
     key => "AAAAB3NzaC1yc2EAAAABIwAAAQEA1sQ+GTcXvpAm01iu4knisrIgj3gKsq2iZDCGBmSGdPF6MDM3zylTXf4nTGgcQwj/f2X9CMliiPBzH5DPXhq4hMTj/hvFQwrZbME+uwLfMPY35VcK/Mqke/DOiY4tlr0cuRKL0WrVR94Rb8wHQ+FL+XqMoflSYKMtCTrb/qTwOXruBTgxxMmQxsHyL3bEqALCPnggTlUsy03ZwyaUWrgGUyYv3SU8gy5nbS6nZhzxTRobSSciqvYmbGsNFDoXacHo7JI1tlA6/aZGGF8IXZDRj7X3k6TmMkFvR0qzEE7pLI8PyaIjC/4JHriiEZZOzaRY32plpsNiqrUyj94EzqPnVw==",
     name => "pavel@artcom.de",
