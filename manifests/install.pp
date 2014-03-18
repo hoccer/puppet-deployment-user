@@ -122,5 +122,14 @@ class deployment-user::install {
     require => File["/home/deployment/.ssh/authorized_keys"],
   }
 
+  ssh_authorized_key { "deployment_patrickj":
+    ensure => present,
+    key => "AAAAB3NzaC1yc2EAAAADAQABAAABAQDaRLrzRARVYhjYv6PTYf90npg5m/qOz6/zToKOsg1ABoOJKYJ9Deys8Ndu6q8u+VAPDdbkpr6rHKma/tYrPIGK0VHUG4gMP1tP/EYN22pl1IkcojLl71YRUL/CgARuMtP0jdy8UVqlkH3ZEhRVV3WIRvu4aNGHI52vCHiCl0yPuqiB4blaa3mWbY/6FIhWB9q4wyXI4vj/0Bw20mVY9mhg5iyXOndHAM7FCRKiMH19nkA/5t6hFXiglnHruSJ170tr1ontRZnw1eSA3xZKMjw/Q03HmopeUMPwJUtTR0/ZftALpDV4rkDqCPfKpG7/7S8vwnkEmrco7SpwDPKQjj61",
+    name => "patrickjuchli@gmail.com",
+    type => "ssh-rsa",
+    user => "deployment",
+    require => File["/home/deployment/.ssh/authorized_keys"],
+  }
+
 }
 
