@@ -131,5 +131,23 @@ class deployment-user::install {
     require => File["/home/deployment/.ssh/authorized_keys"],
   }
 
+  ssh_authorized_key { "deployment_mirko":
+    ensure => present,
+    key => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQCnnsYCzgr9s7/dB5KfUYF24tFCwyFWFfxt03Rx2CA3bZMLNclQLZLg1nInvyJU8kyzOIa+U7TuNvoiKl8dvsNjagruSEbLaneo01ReqDLRvKUc4Oyf+pYzqDxkwYkpoE3LGnRCcfVvQ9kAUpW7M1aGa4bWIivkGU5XvWf+RPH1KcR8XvWml8navlu35Ro4mzc9PxVOAI2/CORgO7F57CaVHwdeF+zRlHzw8cLCU37BOwiM/U8ok8n2lcQR/AZQd+dJyz5UX5365PhOnpF0vTC1Pywi0riJ/6yXfJp6AGZM3qMdB0u8xi6vsMLTCa2uJqOcLeh6sSB1B8eoiLIzwUGh',
+    name => "mirko@artcom.de",
+    type => "ssh-rsa",
+    user => "deployment",
+    require => File["/home/deployment/.ssh/authorized_keys"],
+  }
+
+  ssh_authorized_key { "deployment_jense":
+    ensure => present,
+    key => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQDSdPizBEfcGTh1vNV8PvtGZljFfloj4YlNK9TAT/NL/N8Q4fUsAuX02sZplmwJwBnJXLRREC/C8YEmi8noCH3LPKgqhLZk/sV0fVlObz1swTWcCR4MbljGuobtkxom5hoh9Z6VptXh29pMqHWgeI0w43LVPhBR/aNvhHmV8A58648q74+UNzc2o+p/wov0O/dbX3upLW966VtCWTKwH/wR7OLN0ru9zXNy7zZQpnj6XEqRQcQR3qfOcpKSeDjkOvO/6DXgEurSYAXVTesiFyW/vL6AXMO4QmxfD/OG/DrJTraJIZLcrErFgGZoBG1javhU74+u8neju4uvRdW4R6SB',
+    name => "jense@artcom.de",
+    type => "ssh-rsa",
+    user => "deployment",
+    require => File["/home/deployment/.ssh/authorized_keys"],
+  }
+
 }
 
