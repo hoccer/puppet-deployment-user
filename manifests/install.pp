@@ -149,5 +149,23 @@ class deployment-user::install {
     require => File["/home/deployment/.ssh/authorized_keys"],
   }
 
+   ssh_authorized_key { "deployment_nico":
+    ensure => present,
+    key => 'AAAAB3NzaC1yc2EAAAABIwAAAQEA16A1HT1Egu1xN3FmZ1vxh8AFGD/N20hZS+05XROmlFH21J7WBB1MebNxmEsIPfPGNXGCKC5hnQ5Balq6TeGjtJ33ti8WjlRfc+iq3SEOwL2uWUvtAS1QSwTXkyzRx3Gz+gZ2p3msCBqJc4v5IK6QeCHcB8gtahaZSTNk53hiW+69aDOGAyFH+8rHF0BHIeiSndjn/Fi+zFpb4h4exHbfdgg/6ozFh570mfAsYwPqNEvZ851BZozkhSe+22fy9/jvYb6DrSMZ4FMCHtFBIbte+kFoTM41bnEK3vbtfC2zzJYpUx5R686I1mZAUaBWlI0Un5meoHbQ2VtdNHBR2PCIYQ==',
+    name => "nico@artcom.de",
+    type => "ssh-rsa",
+    user => "deployment",
+    require => File["/home/deployment/.ssh/authorized_keys"],
+  }
+
+  ssh_authorized_key { "deployment_fabian":
+    ensure => present,
+    key => 'AAAAB3NzaC1yc2EAAAABIwAAAQEAw2HXgxXRpNdauBTnsPLBizmBNtnngr8dfjZ5dfxBTVQ86MYhKIG6zOMpIDjbK1u/R0y4pErARnv+dvDXt3FGRa2WfBBaEa3v9Bldf+GAg2kUC76LFjik4/MU3CNP5nMmfFAvgdVfAbl9m5A0PjEZNvjd06h2oJxVADAJm4siSybgr+0Acxp3xSUwGZtqWiIGl85wnW6geWsGwAmgELVmtNtA2pG86fWYa4k2y93OHehgVvXqlyr1HsMbjbcxhy3yS8vQDTQgij6YuxN3sNNJzd9KM6xdg6ru+Gu0Ci41zj3VvkU5qjf4bJ/AhE5TYa79H7zxhKGgdBsmMEkA6Vca/Q==',
+    name => "fabian@artcom.de",
+    type => "ssh-rsa",
+    user => "deployment",
+    require => File["/home/deployment/.ssh/authorized_keys"],
+  }
+
 }
 
