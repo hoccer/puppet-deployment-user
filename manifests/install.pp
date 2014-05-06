@@ -5,6 +5,16 @@ class deployment-user::install {
     name => "deployment",
   }
 
+  group { "adm":
+    ensure => present,
+    name => "adm",
+  }
+
+  group { "admin":
+    ensure => present,
+    name => "admin",
+  }
+
   user { "deployment":
     ensure => present,
     comment => "Login account for deployment",
