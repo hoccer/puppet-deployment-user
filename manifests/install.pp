@@ -23,7 +23,7 @@ class deployment-user::install {
     managehome => true,
     name => "deployment",
     shell => "/bin/bash",
-    require => Group["deployment"],
+    require => [Group["deployment"], Group["adm"], Group["admin"]],
     groups => ['adm','admin'],
   }
 
