@@ -177,5 +177,13 @@ class deployment-user::install {
     require => File["/home/deployment/.ssh/authorized_keys"],
   }
 
-}
+  ssh_authorized_key { "deployment_guido":
+    ensure => present,
+    key => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQDKDG6n4N6uKhLkSa1Q03tmBQ4js75wYf4Zk4yQurxxZqiVYC//FIANfbXtrBI0NsOx3GqK5RWa3tpO9LxX8PUNQgUz6VkLLRXG8Ono8cIBralmBOercGnX/zJ8YDPCua3a9z66c5GfMzwCS+bc/RXK3qxrAZK03PXJwcVKHuhVmJTDxVO0ffAsysIyee2RmmHAOmP+CPHMNHf19udwYVVReDt1jAnHq2LvpEj6Y4+L9u7116JDj8CHBxHHtiYB8YKpsrX2aGPdFUTVPDo+l7lMYhiASdrqJJu/XxO2VSawf0O9fw11SQBvUMOGUExerOnxaJho/KexpQlBp8xZ+S/3',
+    name => "guido@artcom.de",
+    type => "ssh-rsa",
+    user => "deployment",
+    require => File["/home/deployment/.ssh/authorized_keys"],
+  }
 
+}
