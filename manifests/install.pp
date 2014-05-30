@@ -186,4 +186,13 @@ class deployment-user::install {
     require => File["/home/deployment/.ssh/authorized_keys"],
   }
 
+  ssh_authorized_key { "deployment_jens":
+    ensure => present,
+    key => 'AAAAB3NzaC1yc2EAAAABIwAAAQEA0XuGFrNx5R+9SQMQFf4rnpXs3rmK+nuIHhKJN5I4xb13IJgg9uc3GQR4uipoCXbYtquQsSifzl/XELKCYRvLwWFbpkyKR9EGVWp6PIoHFEoq+W4fDcHziEkQirjcAszun8hY+OTvZDagkAmi9L4X3Sd+9qfJFb5cnAJTGrDpeXEbRHybCSwcIeiM94jJPojM/5ECGHoyLiiNWgRRDGGb2ej1rhUTYmStJ8H88+R+nb4ANcniUgu/UH4y5SxalzE4DeMZdDUDi4X+FA7i9ZWFw23lczEeuWJdI6Nf7R77bnrVtU7bCpr/WHRYxrU8ZW/JRSfX8cll8NDGbpAi/b6Iiw==',
+    name => "jens@artcom.de",
+    type => "ssh-rsa",
+    user => "deployment",
+    require => File["/home/deployment/.ssh/authorized_keys"],
+  }
+
 }
