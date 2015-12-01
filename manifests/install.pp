@@ -105,15 +105,6 @@ class deployment-user::install {
     require => File["/home/deployment/.ssh/authorized_keys"],
   }
 
-  ssh_authorized_key { "deployment_andreasm":
-    ensure => present,
-    key => "AAAAB3NzaC1yc2EAAAABIwAAAQEAo41E4Nyvefg1XutPGpccLg3IT9PESEtyGJHb7eIC8nE15l/fHYX/ZfulHf/gJfUxa+bNMBrUCJlzsbqSeJ6eSDyZ8hz27G7Sl4+ieOIgSXn6hD9eG8s9/9LLYrLRiJM2nP8yXY4JAHxG+jHeEr/YB7RH68OMnL1ac1SmVgkRayg37Tvwn1zSmrIoKCk7RCzr4AoBkVhTToO5P5ypU9osx6rcpW+HBX0ASQuCmedK1C6jLk+f04WL/ZjUv6pQwcrOdidyrljMMuPF08UXkWF9l8Sy1SAglISbL6/dND1C5ypnfs5Nvjkkx7QFoPToxuvo+gGlPlVIKYB//WtTcqeTUw==",
-    name => "andreasm@artcom.de",
-    type => "ssh-rsa",
-    user => "deployment",
-    require => File["/home/deployment/.ssh/authorized_keys"],
-  }
-
   ssh_authorized_key { "deployment_kristine":
     ensure => present,
     key => "AAAAB3NzaC1yc2EAAAABIwAAAgEAvo0vAjpd/3JQwo5aHFvXH6aCtx75EsGfXGBdJoKs5SveqM9d8d0AU4FMhPybj/e4D80TFvct0P51PYBHYH1sCIcCDb6g2qztQoYVj5BlEZ4E60PmkM3Y/2XNGE45d0z8oFN/52yrJ6E4ZviCNk0uy6Hu2ch/BW2gFOjLg6Id8i9lhU0JwKaxO6Mdrv5GG22AJYO0W8/UAVy1UnZ7848fSM3q4H4xp40sGCzPHpQymr9Hf5k47c/PqxCTfwLw68k2IvA6iKdiaXKF6bz8+7QaAOQ8v2q4ZY/NSae5Q8E7MxB5wWirb+LtBq5en6IVz8JxQhL5gLyHK5RSPK7MeH1bEf/cuf0xzx4NLSf7Jl9GWjaaczjFUNJq8M7R4L1Oc53uHPOSfe0FVj14M082jtNaI2FSo1cP/sxqdSNOtPK/r2a29BsK4EkytyndaRCCizbAhoQafh8Ws92v/WGls+FG6HikdnHu8JhrPMXRo2EvVKZnhujpX5fGtVcxVhGlB1e4vvaboIz9a/x4PU4UF47gA80nfGPG7ZAw5eGLdRMupRjfO+3xUQaB+/lShfZEmJdTUIGa4FTqXGK60T1w3SivPhB65zPZ5np5qvMqr1yQfsc6tpilEhtFcQM7HdSiZO+cFMMzdpcnM80DWFnwxQ8yWqp5jFQBpYa4jpXHPYPYZp8=",
@@ -127,15 +118,6 @@ class deployment-user::install {
     ensure => present,
     key => "AAAAB3NzaC1yc2EAAAABIwAAAQEA1sQ+GTcXvpAm01iu4knisrIgj3gKsq2iZDCGBmSGdPF6MDM3zylTXf4nTGgcQwj/f2X9CMliiPBzH5DPXhq4hMTj/hvFQwrZbME+uwLfMPY35VcK/Mqke/DOiY4tlr0cuRKL0WrVR94Rb8wHQ+FL+XqMoflSYKMtCTrb/qTwOXruBTgxxMmQxsHyL3bEqALCPnggTlUsy03ZwyaUWrgGUyYv3SU8gy5nbS6nZhzxTRobSSciqvYmbGsNFDoXacHo7JI1tlA6/aZGGF8IXZDRj7X3k6TmMkFvR0qzEE7pLI8PyaIjC/4JHriiEZZOzaRY32plpsNiqrUyj94EzqPnVw==",
     name => "pavel@artcom.de",
-    type => "ssh-rsa",
-    user => "deployment",
-    require => File["/home/deployment/.ssh/authorized_keys"],
-  }
-
-  ssh_authorized_key { "deployment_patrickj":
-    ensure => present,
-    key => "AAAAB3NzaC1yc2EAAAADAQABAAABAQDaRLrzRARVYhjYv6PTYf90npg5m/qOz6/zToKOsg1ABoOJKYJ9Deys8Ndu6q8u+VAPDdbkpr6rHKma/tYrPIGK0VHUG4gMP1tP/EYN22pl1IkcojLl71YRUL/CgARuMtP0jdy8UVqlkH3ZEhRVV3WIRvu4aNGHI52vCHiCl0yPuqiB4blaa3mWbY/6FIhWB9q4wyXI4vj/0Bw20mVY9mhg5iyXOndHAM7FCRKiMH19nkA/5t6hFXiglnHruSJ170tr1ontRZnw1eSA3xZKMjw/Q03HmopeUMPwJUtTR0/ZftALpDV4rkDqCPfKpG7/7S8vwnkEmrco7SpwDPKQjj61",
-    name => "patrickjuchli@gmail.com",
     type => "ssh-rsa",
     user => "deployment",
     require => File["/home/deployment/.ssh/authorized_keys"],
@@ -159,15 +141,6 @@ class deployment-user::install {
     require => File["/home/deployment/.ssh/authorized_keys"],
   }
 
-   ssh_authorized_key { "deployment_nico":
-    ensure => present,
-    key => 'AAAAB3NzaC1yc2EAAAABIwAAAQEA16A1HT1Egu1xN3FmZ1vxh8AFGD/N20hZS+05XROmlFH21J7WBB1MebNxmEsIPfPGNXGCKC5hnQ5Balq6TeGjtJ33ti8WjlRfc+iq3SEOwL2uWUvtAS1QSwTXkyzRx3Gz+gZ2p3msCBqJc4v5IK6QeCHcB8gtahaZSTNk53hiW+69aDOGAyFH+8rHF0BHIeiSndjn/Fi+zFpb4h4exHbfdgg/6ozFh570mfAsYwPqNEvZ851BZozkhSe+22fy9/jvYb6DrSMZ4FMCHtFBIbte+kFoTM41bnEK3vbtfC2zzJYpUx5R686I1mZAUaBWlI0Un5meoHbQ2VtdNHBR2PCIYQ==',
-    name => "nico@artcom.de",
-    type => "ssh-rsa",
-    user => "deployment",
-    require => File["/home/deployment/.ssh/authorized_keys"],
-  }
-
   ssh_authorized_key { "deployment_fabian":
     ensure => present,
     key => 'AAAAB3NzaC1yc2EAAAABIwAAAQEAw2HXgxXRpNdauBTnsPLBizmBNtnngr8dfjZ5dfxBTVQ86MYhKIG6zOMpIDjbK1u/R0y4pErARnv+dvDXt3FGRa2WfBBaEa3v9Bldf+GAg2kUC76LFjik4/MU3CNP5nMmfFAvgdVfAbl9m5A0PjEZNvjd06h2oJxVADAJm4siSybgr+0Acxp3xSUwGZtqWiIGl85wnW6geWsGwAmgELVmtNtA2pG86fWYa4k2y93OHehgVvXqlyr1HsMbjbcxhy3yS8vQDTQgij6YuxN3sNNJzd9KM6xdg6ru+Gu0Ci41zj3VvkU5qjf4bJ/AhE5TYa79H7zxhKGgdBsmMEkA6Vca/Q==',
@@ -186,21 +159,14 @@ class deployment-user::install {
     require => File["/home/deployment/.ssh/authorized_keys"],
   }
 
-  ssh_authorized_key { "deployment_jens":
+  ssh_authorized_key { "deployment_crux":
     ensure => present,
-    key => 'AAAAB3NzaC1yc2EAAAABIwAAAQEA0XuGFrNx5R+9SQMQFf4rnpXs3rmK+nuIHhKJN5I4xb13IJgg9uc3GQR4uipoCXbYtquQsSifzl/XELKCYRvLwWFbpkyKR9EGVWp6PIoHFEoq+W4fDcHziEkQirjcAszun8hY+OTvZDagkAmi9L4X3Sd+9qfJFb5cnAJTGrDpeXEbRHybCSwcIeiM94jJPojM/5ECGHoyLiiNWgRRDGGb2ej1rhUTYmStJ8H88+R+nb4ANcniUgu/UH4y5SxalzE4DeMZdDUDi4X+FA7i9ZWFw23lczEeuWJdI6Nf7R77bnrVtU7bCpr/WHRYxrU8ZW/JRSfX8cll8NDGbpAi/b6Iiw==',
-    name => "jens@artcom.de",
+    key => 'AAAAB3NzaC1yc2EAAAABIwAAAQEAyPCj4FE6wcNyRDXCfTdMd0mTJWxCILNt98DYaLZ8fjafTzAsf1JuPfS+usRxHJfY5p4QJIXQZx0iWQWAfyNo2nzdkJhdUDYtTfqPxF+tyaRX2yzSmh1jq6mj4befYrrEB+gAvEUc+QdZIhq6GM8axMjvm9x3GwTO4qvtohiDzYhqgNjuGziLj8ASqel6bskPcSeXwvJe+fVbf1b3DCYbxirwpMtiQpCsm7VqwpRkMlzX9rwW3karqa3aAeFFXGg4U12AHO2x7kOlyQrBSNXEvhdO/Z6+D16hjD2zKfBimEL0mFPoy9asbJbCjC4kFgTqUqXDMwcCQUmhYUHH47oN7Q==',
+    name => "crux@artcom.de",
     type => "ssh-rsa",
     user => "deployment",
     require => File["/home/deployment/.ssh/authorized_keys"],
   }
 
-  ssh_authorized_key { "deployment_alexw":
-    ensure => present,
-    key => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQCku5wcqrVmX8DRoklANUkmQm0qKrU/ZyB/2HuwHq28BENEW+CT7gtwZ9PTc+t+PyFYFkN+0Er3nDgy2tWev6qyLYdpYYId7KgTJHhuZ5vtX/oJnE3b8eLiTsrqIcGdxuCeT1GUv0conW9ZpwhTHz27oBDzu5oppZREjLPs3YbFfOHl4ia5Ttw9nwwE9MgDYSRh764vdeqvrNKUIpC344B78bAAz3oBXHySBXrr76FcdIFRl+ZaFpw9ArzBju7snVric19mm9WvMTSYneKjmdjPa33bywl1JCILdmyWURvVCVZL0ExkTo8TiyexKvBgPdz/IF/kiCrEZv25fVbSbQXD',
-    name => "alexw@artcom.de",
-    type => "ssh-rsa",
-    user => "deployment",
-    require => File["/home/deployment/.ssh/authorized_keys"],
-  }
+}
 }
